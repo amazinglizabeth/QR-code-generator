@@ -10,11 +10,12 @@ function generateQR() {
       "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" +
       qrText.value;
     imgBox.classList.add("show-img");
+    qrText.style.border = "1px solid blue";
   } else {
     qrText.classList.add("error");
+    qrText.style.border = "2px solid red";
     setTimeout(() => {
       qrText.classList.remove("error");
     }, 1000);
-    qrText.style.border = "2px solid red";
   }
 }
